@@ -20,9 +20,11 @@ const config = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
+          // Order of loaders: BOTTOM -> TOP
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
         ]
       }
     ]
