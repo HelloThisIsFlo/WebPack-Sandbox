@@ -14,6 +14,18 @@ const config = {
     host: "0.0.0.0",
     port: 1234,
     allowedHosts: ["sandbox.floriankempenich.com"]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
+    ]
   }
 };
 
