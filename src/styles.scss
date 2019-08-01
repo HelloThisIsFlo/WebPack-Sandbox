@@ -15,7 +15,7 @@ body {
     width: 100px;
     transition: all 0.5s;
     user-select: none;
-    background: linear-gradient(to bottom, white, black);
-    // filter: invert(1);
+    background: linear-gradient(to bottom, blue, red);
+    filter: invert(1);
   }
 }
