@@ -7,8 +7,7 @@ body {
   transform: translate(1, 1);
 }
 
-app {
-
+#app {
   #debug {
     // This is a SCSS only comment, parsing should fail
     // if postcss tries to read this file before it's converted!
@@ -17,5 +16,6 @@ app {
     transition: all 0.5s;
     user-select: none;
     background: linear-gradient(to bottom, white, black);
+    // filter: invert(1);
   }
 }
