@@ -7,8 +7,12 @@ body {
   transform: translate(1, 1);
 }
 
-#app {
-  #debug {
+.app {
+  border: dashed salmon 5px;
+}
+
+.app {
+  .debug {
     // This is a SCSS only comment, parsing should fail
     // if postcss tries to read this file before it's converted!
     height: 100px;

@@ -22,7 +22,7 @@ const config = {
         use: [
           // Order of loaders: BOTTOM -> TOP
           "style-loader",
-          "css-loader",
+          { loader: "css-loader", options: { modules: true } },
           "postcss-loader",
           "sass-loader"
         ]
