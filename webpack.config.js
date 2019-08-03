@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const config = {
   entry: "./src/index.js",
@@ -15,13 +16,18 @@ const config = {
     port: 1234,
     allowedHosts: ["sandbox.floriankempenich.com"]
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    })
+  ],
   module: {
     rules: [
       {
         test: /\.scss$/,
         use: [
           // Order of loaders: BOTTOM -> TOP
-          "style-loader",
+          MiniCssExtractPlugin.loader, // Replaces: 'style-loader'. Provides separate CSS file instead of using '<style>'
           { loader: "css-loader", options: { modules: true } },
           "postcss-loader",
           "sass-loader"
